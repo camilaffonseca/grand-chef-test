@@ -94,7 +94,4 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# storybook
-storybook-static
-
 .vercel
