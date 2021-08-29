@@ -8,6 +8,7 @@ const Search = ({ ...props }) => (
     borderWidth='1px'
     borderStyle='solid'
     borderColor='black10'
+    w='fit-content'
     {...props}
   >
     <Div h='40px' w='40px' justifyContent='center' alignItems='center'>
