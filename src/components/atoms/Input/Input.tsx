@@ -8,6 +8,14 @@ const Input = styled.inputBox`
   color: black87;
   font-size: 1.4rem;
   border: none;
+
+  &::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    height: 16px;
+    width: 16px;
+    content: url('/icons/close-button-icon.png');
+    margin-right: 6px;
+  }
 `
 
 export default Input
