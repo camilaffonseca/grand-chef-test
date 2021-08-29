@@ -15,6 +15,7 @@ const Input = styled.inputBox`
     width: 16px;
     content: url('/icons/close-button-icon.png');
     margin-right: 6px;
+    cursor: pointer;
   }
 `
 
