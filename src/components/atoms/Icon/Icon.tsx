@@ -1,6 +1,6 @@
 import styled, { SystemProps } from '@xstyled/styled-components'
 
-type IconTypes = 'search'
+import { IconTypes } from './types'
 
 type IconProps = {
   type: IconTypes
