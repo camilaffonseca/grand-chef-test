@@ -13,7 +13,7 @@ const Input = styled.inputBox`
     -webkit-appearance: none;
     height: 16px;
     width: 16px;
-    content: url('/icons/close-button-icon.png');
+    content: url('/icons/close-button-icon.svg');
     margin-right: 6px;
     cursor: pointer;
   }
