@@ -8,6 +8,7 @@ const Search = ({ ...props }) => (
     borderWidth='1px'
     borderStyle='solid'
     borderColor='black10'
+    borderRadius='4px'
     w='fit-content'
     {...props}
   >

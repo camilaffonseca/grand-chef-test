@@ -1,4 +1,6 @@
-export type IconTypes =
+import { SystemProps } from '@xstyled/styled-components'
+
+type IconTypes =
   | '3d_rotation'
   | 'ac_unit'
   | 'access_alarm'
@@ -931,3 +933,8 @@ export type IconTypes =
   | 'zoom_in'
   | 'zoom_out'
   | 'zoom_out_map'
+
+export type IconProps = {
+  type: IconTypes
+  color?: string
+} & SystemProps

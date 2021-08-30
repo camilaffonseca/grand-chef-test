@@ -1,14 +1,9 @@
-import styled, { SystemProps } from '@xstyled/styled-components'
+import styled from '@xstyled/styled-components'
 
-import { IconTypes } from './types'
-
-type IconProps = {
-  type: IconTypes
-  color?: string
-} & SystemProps
+import type { IconProps } from './types'
 
 const IconComponent = styled.iBox`
-  color: gray;
+  color: black54;
   width: fit-content;
   height: fit-content;
 `
