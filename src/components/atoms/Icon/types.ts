@@ -1,6 +1,6 @@
 import { SystemProps } from '@xstyled/styled-components'
 
-type IconTypes =
+export type IconTypes =
   | '3d_rotation'
   | 'ac_unit'
   | 'access_alarm'
