@@ -1,3 +1,5 @@
+import { SystemProps } from '@xstyled/styled-components'
+
 import { DateTemplate } from 'utils/formatters'
 
 export type DateHandler = (date: Date) => string
@@ -7,9 +9,10 @@ export type DatePickerButtonBaseProps = {
   onClick?: () => void
   dateHandler?: DateHandler
   dateTemplate?: DateTemplate
-}
+  color?: string
+} & SystemProps
 
-export type DatePickerProps = Pick<
-  DatePickerButtonBaseProps,
-  'dateHandler' | 'dateTemplate'
->
+export type DatePickerProps = {
+  color?: string
+} & Pick<DatePickerButtonBaseProps, 'dateHandler' | 'dateTemplate'> &
+  SystemProps

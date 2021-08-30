@@ -5,7 +5,11 @@ import { DatePickerButton } from './DatePickerButton'
 
 import type { DatePickerProps } from './types'
 
-const DatePickerComponent = ({ dateHandler, dateTemplate }: DatePickerProps) => {
+const DatePickerComponent = ({
+  dateHandler,
+  dateTemplate,
+  ...props
+}: DatePickerProps) => {
   const [startDate, setStartDate] = useState<Date>(new Date())
 
   return (
@@ -13,7 +17,11 @@ const DatePickerComponent = ({ dateHandler, dateTemplate }: DatePickerProps) => 
       selected={startDate}
       onChange={(date: Date) => setStartDate(date)}
       customInput={
-        <DatePickerButton dateHandler={dateHandler} dateTemplate={dateTemplate} />
+        <DatePickerButton
+          dateHandler={dateHandler}
+          dateTemplate={dateTemplate}
+          {...props}
+        />
       }
     />
   )

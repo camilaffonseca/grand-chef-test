@@ -13,7 +13,10 @@ import type { DateHandler, DatePickerButtonBaseProps } from './types'
 const DEFAULT_DATE_TEMPLATE = 'dd/mm/yyyy'
 
 export const DatePickerButton = forwardRef<HTMLButtonElement, DatePickerButtonBaseProps>(
-  ({ value, onClick, dateHandler, dateTemplate }: DatePickerButtonBaseProps, ref) => {
+  (
+    { value, onClick, dateHandler, dateTemplate, ...props }: DatePickerButtonBaseProps,
+    ref
+  ) => {
     const getDisplayDate = useCallback(
       (
         dateMemo?: Date,
@@ -34,7 +37,7 @@ export const DatePickerButton = forwardRef<HTMLButtonElement, DatePickerButtonBa
     )
 
     return (
-      <Button ref={ref} onClick={onClick} justifyContent='space-between'>
+      <Button ref={ref} onClick={onClick} justifyContent='space-between' {...props}>
         <Div flexDirection='column' alignItems='flex-start'>
           <Text fontSize='1.2rem' color='black54' lineHeight='1.4rem'>
             Data
