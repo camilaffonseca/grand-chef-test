@@ -7,17 +7,19 @@ export type Option = {
   label: string
 }
 
-type Options = Option[]
+export type Options = Option[]
 
 export type SelectProps = {
   options: Options
+  defaultValue?: Option
   onChange: (option: Option) => void
   dropdown?: boolean
   title: string
-}
+  color?: string
+} & SystemProps
 
 export type SelectOptionProps = {
   text: string
-  onClick: (event: MouseEvent) => void
+  onClick?: (event: MouseEvent) => void
   color?: string
 } & SystemProps
