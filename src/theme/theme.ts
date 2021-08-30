@@ -13,6 +13,7 @@ const theme = {
     white87: '#FFFFFFDE',
 
     gray: '#DADADA',
+    darkgrey: '#bcbcbc',
     background: '#fafafa',
 
     orangePrimary: '#EF6C00',
@@ -20,6 +21,11 @@ const theme = {
     orangeSecondary: '#F57C00',
     orangeTertiary: '#F28933',
     orangeQuaternary: '#8F4100',
+  },
+  screens: {
+    xs: 0,
+    md: 768,
+    lg: 1024,
   },
 }
 
