@@ -2,7 +2,9 @@ import Div from 'components/atoms/Div'
 import Icon from 'components/atoms/Icon'
 import Input from 'components/atoms/Input'
 
-const Search = ({ ...props }) => (
+import { SearchProps } from './types'
+
+const Search = ({ placeholder, ...props }: SearchProps) => (
   <Div
     alignItems='center'
     borderWidth='1px'
@@ -10,12 +12,13 @@ const Search = ({ ...props }) => (
     borderColor='black10'
     borderRadius='4px'
     w='fit-content'
+    h='fit-content'
     {...props}
   >
     <Div h='40px' w='40px' justifyContent='center' alignItems='center'>
       <Icon type='search' />
     </Div>
-    <Input type='search' />
+    <Input placeholder={placeholder} type='search' />
   </Div>
 )
 

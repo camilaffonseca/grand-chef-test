@@ -5,7 +5,7 @@ import Text from 'components/atoms/Text'
 import type { SelectOptionProps } from './types'
 
 const SelectOption = ({ text, onClick, ...props }: SelectOptionProps) => (
-  <Button variant='ghost' onClick={e => onClick(e)} w='100%' {...props}>
+  <Button variant='ghost' onClick={e => onClick && onClick(e)} w='100%' {...props}>
     <Div
       h='40px'
       borderTopWidth='1px'

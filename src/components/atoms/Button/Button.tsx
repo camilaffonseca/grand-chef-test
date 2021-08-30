@@ -8,7 +8,7 @@ const getButtonVariant = (variant: string) => {
       return css`
         height: fit-content;
         width: fit-content;
-        min-width: fit-content;
+        min-width: fit-content !important;
         border: none;
         border-radius: 0;
         background: transparent;
@@ -26,10 +26,14 @@ const Button = styled.buttonBox<ButtonProps>`
   align-items: center;
   justify-content: center;
   height: 40px;
-  min-width: 150px;
+  min-width: 100px;
   border-radius: 4px;
   border: 1px solid ${th.color('black10')};
   padding: 4px 8px;
+
+  @media (min-width: md) {
+    min-width: 150px;
+  }
 
   ${({ variant }: ButtonProps) => getButtonVariant(variant || '')}
 `

@@ -14,8 +14,15 @@ import SelectOption from './SelectOption'
 
 import type { Option, SelectProps } from './types'
 
-const Select = ({ options, onChange, dropdown, title }: SelectProps) => {
-  const [currentValue, setCurrentValue] = useState<Option>()
+const Select = ({
+  options,
+  onChange,
+  defaultValue,
+  dropdown,
+  title,
+  ...props
+}: SelectProps) => {
+  const [currentValue, setCurrentValue] = useState<Option | undefined>(defaultValue)
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   const containerRef = useRef(null)
@@ -27,11 +34,10 @@ const Select = ({ options, onChange, dropdown, title }: SelectProps) => {
   useOnClickOutside(containerRef, handleClickOutside)
 
   return (
-    <Div w='fit-content' ref={containerRef} flexDirection='column'>
+    <Div w='fit-content' ref={containerRef} flexDirection='column' {...props}>
       <Button
         variant={dropdown ? 'ghost' : ''}
         gap={dropdown && '3px'}
-        w={dropdown && '120px'}
         justifyContent='space-between'
         paddingRight={!dropdown && '4px'}
         onClick={() => {
@@ -52,13 +58,19 @@ const Select = ({ options, onChange, dropdown, title }: SelectProps) => {
             </Text>
           )}
         </Div>
-        <Icon color='black54' type='arrow_drop_down' />
+        <Icon
+          fontSize={dropdown ? '1.3rem' : '2.4rem'}
+          color='black54'
+          type='arrow_drop_down'
+        />
       </Button>
       {isOpen && (
         <Div w='fit-content'>
           <Card
             flexDirection='column'
-            minWidth={dropdown ? '110px' : '149px'}
+            minWidth={
+              dropdown ? { xs: '90px', lg: '110px' } : { xs: '120px', lg: '149px' }
+            }
             w='fit-content'
             position='absolute'
           >
